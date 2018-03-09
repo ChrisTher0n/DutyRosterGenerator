@@ -1,0 +1,60 @@
+﻿@model IEnumerable<WOFWebApp.Models.ScheduleDayModel>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Wheel of Fate</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="container">
+        <div class="one">
+            <div></div>
+        </div>
+        <div class="two">
+            <div>
+                <h3>Shift scheduler</h3>
+                <table class="table">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Morning)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Afternoon)
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Morning)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Afternoon)
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+                <h5><b>@Html.ActionLink("Spin again", "Index", new { /* id=item.PrimaryKey */ })</b></h5>
+            </div>
+        </div>
+        <div class="three">
+            <div></div>
+        </div>
+    </div>
+   
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>

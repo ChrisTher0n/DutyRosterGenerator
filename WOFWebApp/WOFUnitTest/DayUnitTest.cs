@@ -44,23 +44,5 @@ namespace WOFUnitTest
                 prevResult = result;
             }
         }
-
-        /* Proposed test TODO
-        [TestMethod]
-        public void TestEvenWorkload()
-        {
-            EngineerContainer newContainer = new EngineerContainer();
-
-            Scheduler testSchedule = new Scheduler(newContainer);
-            testSchedule.GenerateSchedule(10);
-
-                
-            foreach(Engineer e in newContainer)
-            {
-                Assert.IsTrue(newContainer.ReturnShiftCount(e.EmployeeNum) >= 2);
-            }
-            
-        }
-        */        
     }
 }

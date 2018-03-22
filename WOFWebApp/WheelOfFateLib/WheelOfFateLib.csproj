@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Employee.cs" />
     <Compile Include="IScheduler.cs" />
+    <Compile Include="ScheduleDay.cs" />
     <Compile Include="Scheduler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SchedulerBase.cs" />
